@@ -1,24 +1,20 @@
 import React from "react";
 import CarouselComponent from "../../Components/Carousel";
 
-const styleH1 = {
-  textAlign: "center",
-  color: "red",
-  position: "absolute",
-  zIndex: 1,
-  top: "45%",
-  left: "45%"
-};
-
-const styleMainDiv = {
-  opacity: 0.8
-};
+const divDimensions = {
+  height: '450px',
+  width: '100%',
+  backgroundColor: 'dodgerBlue',
+  border: '1.5px solid',
+  margin: '2.5% 0'
+}
 
 const Home = props => {
   return (
-    <div style={styleMainDiv}>
-      <h1 style={styleH1}>{props.page}</h1>
+    <div>
+      <h1>{props.page}</h1>
       <CarouselComponent />
+      <div style={divDimensions}></div>
     </div>
   );
 };
