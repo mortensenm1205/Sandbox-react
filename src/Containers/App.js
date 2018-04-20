@@ -4,7 +4,7 @@ import Services from "./Services/Services";
 import About from "./About/About";
 import NavBar from '../Components/Navbar';
 import { Route } from "react-router-dom";
-   
+
 const App = () => {
   return (
     <div>
