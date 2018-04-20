@@ -16,3 +16,15 @@ Once finished installing, go ahead and deploy
 npm start
 ```
 You should now be running on `localhost:3000`
+
+## Built With
+ * Create-React-App
+ * Redux
+ * Router
+ * WP-API
+ * Material UI
+ * React-Bootstrap
+
+## User cases
+
+## Versions
