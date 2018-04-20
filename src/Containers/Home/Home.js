@@ -1,7 +1,6 @@
 import React from "react";
 import CarouselComponent from "../../Components/Carousel";
 import Post_card from "../../Components/Post_card";
-import Footer from "../../Components/Footer";
 
 const divDimensions = {
   height: '450px',
@@ -20,7 +19,6 @@ const Home = props => {
       <Post_card />
       <Post_card />
       <Post_card />
-      <Footer />
     </div>
   );
 };

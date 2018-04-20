@@ -3,6 +3,7 @@ import Home from "./Home/Home";
 import Services from "./Services/Services";
 import About from "./About/About";
 import NavBar from '../Components/Navbar';
+import Footer from "../Components/Footer";
 import { Route } from "react-router-dom";
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
           return <About page="About" />;
         }}
       />
+      <Footer />
     </div>
   );
 };
