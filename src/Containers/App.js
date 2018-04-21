@@ -19,9 +19,16 @@ const App = () => {
       />
       <Route
         exact
-        path="/services"
+        path="/translation"
         render={() => {
-          return <Services page="Services" />;
+          return <Services type="Translation" />;
+        }}
+      />
+      <Route
+        exact
+        path="/interpretation"
+        render={() => {
+          return <Services type="Interpretation" />;
         }}
       />
       <Route

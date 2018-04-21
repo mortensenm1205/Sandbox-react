@@ -5,12 +5,7 @@ const Services = props => {
   return (
     <div>
       <Service
-        typeServ='Translation'
-        typeImg={process.env.PUBLIC_URL + '/images/placeholder_red.png'}
-        areaServ={process.env.PUBLIC_URL + '/images/placeholder_gray.png'}
-      />
-      <Service
-        typeServ='Interpretation'
+        typeServ={props.type}
         typeImg={process.env.PUBLIC_URL + '/images/placeholder_red.png'}
         areaServ={process.env.PUBLIC_URL + '/images/placeholder_gray.png'}
       />
