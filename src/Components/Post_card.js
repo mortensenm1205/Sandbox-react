@@ -5,7 +5,7 @@ const Post_card = () => {
   return (
     <Card style={{ width: '25%' }}>
       <CardMedia >
-        <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} />
+        <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} alt='Post_card'/>
       </CardMedia>
       <CardTitle title="Post Title" subtitle="Post Subtitle" />
       <CardText>
