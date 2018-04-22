@@ -17,27 +17,12 @@ const App = () => {
           return <Home page="Home" />;
         }}
       />
-      <Route
-        exact
-        path="/translation"
-        render={() => {
-          return <Services type="Translation" />;
-        }}
-      />
-      <Route
-        exact
-        path="/interpretation"
-        render={() => {
-          return <Services type="Interpretation" />;
-        }}
-      />
-      <Route
-        exact
-        path="/about"
-        render={() => {
-          return <About page="About" />;
-        }}
-      />
+      {/*
+        Placed <About /> and <Service /> in here and moved the corresponding routes to that
+        those components just because they have nested components that would be too long to list in this one spot
+      */}
+      <Services />
+      <About />
       <Footer />
     </div>
   );

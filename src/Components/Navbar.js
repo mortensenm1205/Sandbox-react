@@ -24,10 +24,10 @@ const NavBar = () => {
             About
             <ul>
               <li>
-                <Link to='ourTeam'>Our Team</Link>
+                <Link to='blog'>Blog</Link>
               </li>
               <li>
-                <Link to='blog'>Blog</Link>
+                <Link to='ourTeam'>Our Team</Link>
               </li>
             </ul>
           </li>
