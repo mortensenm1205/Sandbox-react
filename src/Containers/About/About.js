@@ -1,5 +1,6 @@
 import React from "react";
 import { Route } from 'react-router-dom';
+import Blog from '../../Components/Blog';
 
 const About = props => {
   /*
@@ -11,7 +12,7 @@ const About = props => {
         exact
         path="/blog"
         render={() => {
-          return <h1>Hello</h1>;
+          return <Blog />;
         }}
       />
       <Route
