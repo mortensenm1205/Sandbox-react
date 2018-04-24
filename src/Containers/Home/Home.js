@@ -1,6 +1,6 @@
 import React from "react";
 import CarouselComponent from "../../Components/Carousel";
-import PostCard from "../../Components/Post_card";
+// import PostCard from "../../Components/Post_card";
 
 const divDimensions = {
   height: '450px',
@@ -16,9 +16,7 @@ const Home = props => {
       <h1>{props.page}</h1>
       <CarouselComponent />
       <div style={divDimensions}></div>
-      <PostCard />
-      <PostCard />
-      <PostCard />
+
     </div>
   );
 };

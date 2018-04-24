@@ -1,8 +1,9 @@
 import React from 'react';
+import PostCard from './PostCard';
 
 const Blog = () => {
   return (
-    <h1>Blog</h1>
+    <PostCard />
   );
 };
 
