@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from 'react-bootstrap';
 import CarouselComponent from "../../Components/Carousel";
 // import PostCard from "../../Components/Post_card";
 
@@ -13,7 +14,12 @@ const divDimensions = {
 const Home = props => {
   return (
     <div>
-      <h1>{props.page}</h1>
+      <Button bsStyle="primary" bsSize="large" >
+        Quote
+      </Button>
+      <Button bsSize="large">
+        Apply
+      </Button>
       <CarouselComponent />
       <div style={divDimensions}></div>
 

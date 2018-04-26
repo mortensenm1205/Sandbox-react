@@ -13,9 +13,7 @@ const App = () => {
       <Route
         exact
         path="/"
-        render={() => {
-          return <Home page="Home" />;
-        }}
+        component={Home}
       />
       {/*
         Placed <About /> and <Service /> in here and moved the corresponding routes to that

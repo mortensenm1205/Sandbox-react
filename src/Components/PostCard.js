@@ -27,7 +27,7 @@ class PostCard extends Component {
           {post.better_featured_image ?
             <img src={post.better_featured_image.source_url} alt={post.better_featured_image.alt_text} />
             :
-            <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} />
+            <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} alt='placeholder'/>
           }
           </CardMedia>
           <CardText>{renderHTML(post.content.rendered)}</CardText>
