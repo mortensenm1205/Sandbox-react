@@ -1,31 +1,20 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import renderHTML from 'react-render-html'
 import { Card, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import { connect } from 'react-redux';
+import { postsFetchData } from '../Actions/index';
 
 class PostCard extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      posts: []
-    }
-  }
-
   componentDidMount() {
-    axios.get('http://reacttranslation.local/wp-json/wp/v2/posts?_embed')
-    .then(response => {
-      this.setState({
-        posts: response.data
-      })
-    })
+    this.props.fetchData('http://reacttranslation.local/wp-json/wp/v2/posts');
   }
 
   render() {
 
     return (
       <div>
-      {this.state.posts.map(post => {
+      {this.props.posts.map(post => {
         return (
           <Card style={{ width: '35%' }} key={post.id}>
           <CardTitle title={post.title.rendered} />
@@ -45,4 +34,17 @@ class PostCard extends Component {
   }
 }
 
-export default PostCard;
+
+const mapStateToProps = state => {
+  return {
+    posts: state.posts
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchData: (url) => dispatch(postsFetchData(url))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(PostCard);
