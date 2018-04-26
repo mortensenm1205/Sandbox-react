@@ -1,6 +1,7 @@
 import React from "react";
-import { Button } from 'react-bootstrap';
 import CarouselComponent from "../../Components/Carousel";
+import Modal from "../../Components/Modal";
+import { Button } from "react-bootstrap";
 // import PostCard from "../../Components/Post_card";
 
 const divDimensions = {
@@ -14,12 +15,8 @@ const divDimensions = {
 const Home = props => {
   return (
     <div>
-      <Button bsStyle="primary" bsSize="large" >
-        Quote
-      </Button>
-      <Button bsSize="large">
-        Apply
-      </Button>
+      <Modal type="Quote"/>
+      <Modal type="Apply"/>
       <CarouselComponent />
       <div style={divDimensions}></div>
 
