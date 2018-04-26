@@ -1,7 +1,6 @@
 import React from "react";
 import CarouselComponent from "../../Components/Carousel";
 import Modal from "../../Components/Modal";
-import { Button } from "react-bootstrap";
 // import PostCard from "../../Components/Post_card";
 
 const divDimensions = {
@@ -19,7 +18,6 @@ const Home = props => {
       <Modal type="Apply"/>
       <CarouselComponent />
       <div style={divDimensions}></div>
-
     </div>
   );
 };

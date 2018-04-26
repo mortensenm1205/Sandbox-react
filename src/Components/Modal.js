@@ -10,7 +10,6 @@ class BaseModal extends Component {
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
-
   }
 
   handleClose() {
@@ -32,7 +31,21 @@ class BaseModal extends Component {
             <Modal.Title>Modal Heading</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h1>Some text in the body</h1>
+            <h1>{this.props.type}</h1>
+            <form>
+              <label>
+                Name:
+                <input type="text" />
+              </label>
+              <label>
+                Email:
+                <input type="text" />
+              </label>
+              <label>
+                Age:
+                <input type="text" />
+              </label>
+            </form>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.handleClose}>Close</Button>
