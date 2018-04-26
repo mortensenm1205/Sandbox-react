@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import ModalType from './ModalType';
 
 class BaseModal extends Component {
   constructor(props) {
@@ -31,21 +32,7 @@ class BaseModal extends Component {
             <Modal.Title>Modal Heading</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h1>{this.props.type}</h1>
-            <form>
-              <label>
-                Name:
-                <input type="text" />
-              </label>
-              <label>
-                Email:
-                <input type="text" />
-              </label>
-              <label>
-                Age:
-                <input type="text" />
-              </label>
-            </form>
+            <ModalType type={this.props.type}/>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={this.handleClose}>Close</Button>
