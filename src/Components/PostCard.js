@@ -5,16 +5,21 @@ import { connect } from 'react-redux';
 import { postsFetchData } from '../Actions/index';
 
 class PostCard extends Component {
-
+  //For the moment how we will make this work for both computers, we will need
+  //to use two different local accounts, ie two different api calls. Just for now
+  //Use the one for the corresponding computer:
+  //reacttranslation is for the Macbook
+  //reacttranslationwork is for the work computer
   componentDidMount() {
-    this.props.fetchData('http://reacttranslation.local/wp-json/wp/v2/posts');
+    // this.props.fetchData('http://reacttranslation.local/wp-json/wp/v2/posts');
+    this.props.fetchData('http://reacttranslationwork.local/wp-json/wp/v2/posts');
   }
 
   render() {
 
     return (
       <div>
-      {this.props.posts.map(post => {
+      {this.props.posts.map(function(post) {
         return (
           <Card style={{ width: '35%' }} key={post.id}>
           <CardTitle title={post.title.rendered} />

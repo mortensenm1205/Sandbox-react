@@ -11,7 +11,7 @@ export function postsFetchData(url) {
   return (dispatch) => {
      axios.get(url)
       .then(function(posts) {
-        dispatch(postsFetchDataSuccess(posts))
+        dispatch(postsFetchDataSuccess(posts.data))
       });
   }
 }
