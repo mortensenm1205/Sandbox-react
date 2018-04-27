@@ -4,6 +4,13 @@ const ModalType = props => {
   return (
     <div>
       <h1>{props.type}</h1>
+      <div>
+        <h2>Type of Form</h2>
+        <input type="radio" value="translation" checked={true}/>
+        Translation
+        <input type="radio" value="interpretation"/>
+        Interpretation
+      </div>
       <form>
         <label>
           Name:
@@ -16,7 +23,7 @@ const ModalType = props => {
         </label>
         <br />
         <label>
-          Age: 
+
           <input type="text" />
         </label>
       </form>
