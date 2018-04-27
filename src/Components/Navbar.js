@@ -15,9 +15,6 @@ const NavBar = () => {
               <li>
                 <Link to='/translation'>Translation</Link>
               </li>
-              <li>
-                <Link to='/interpretation'>Interpretation</Link>
-              </li>
             </ul>
           </li>
           <li>

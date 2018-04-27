@@ -20,6 +20,10 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": " https://github.com/mortensenm1205/wp-api-react.git"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
