@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import renderHTML from 'react-render-html'
 import { Card, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import { connect } from 'react-redux';
-import { postsFetchData } from '../Actions/index';
+import { postsFetchData } from '../Actions/posts';
 
 class PostCard extends Component {
   //For the moment how we will make this work for both computers, we will need

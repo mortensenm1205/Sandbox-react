@@ -1,4 +1,5 @@
 import React from 'react';
+import FileUpload from './FileUpload';
 import { Button } from 'react-bootstrap';
 
 const ModalType = props => {
@@ -45,11 +46,7 @@ const Quote = props => {
             <option value="3">3</option>
           </select>
         </label>
-        <label>
-          Upload your Source Document:
-          <input type="file" />
-        </label>
-        <Button>Submit</Button>
+        <FileUpload />
       </form>
     </div>
   )
