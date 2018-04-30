@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { applicationDataSuccess } from '../Actions/applicationData';
 import { Button } from 'react-bootstrap';
 
 class Apply extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      appInfo: []
-    }
-  }
 
   handleChange = (event) => {
-    this.setState({
-      appInfo: this.state.appInfo.concat({ [event.target.name]: event.target.value })
-    })
+      this.props.appInfo(event.target.name, event.target.value)
   }
 
   handleClick = () => {
-    console.log(this.state.appInfo);
+    console.log(this.props.appliedData);
   }
 
   render() {
@@ -57,7 +51,8 @@ class Apply extends Component {
           </label>
           <label>
             Country:
-            <select>
+            <select name="Country" onChange={this.handleChange}>
+              <option>Select a Country...</option>
               <option value="usa">United States</option>
               <option value="ger">Germany</option>
               <option value="mex">Mexico</option>
@@ -70,4 +65,16 @@ class Apply extends Component {
   }
 }
 
-export default Apply;
+const mapStateToProps = state => {
+  return {
+    appliedData: state.applicationFormData
+  }
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    appInfo: (appName, appInfo) => dispatch(applicationDataSuccess(appName, appInfo))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Apply);
