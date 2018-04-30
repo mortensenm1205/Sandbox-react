@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux';
 import { posts } from './posts';
-import { selectedFile } from './fileUpload';
+import { selectedFile, quoteFormData } from './quoteData';
 
 export default combineReducers({
   posts,
-  selectedFile
+  selectedFile,
+  quoteFormData
 });
