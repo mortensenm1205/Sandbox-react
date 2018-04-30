@@ -13,7 +13,6 @@ class Quote extends Component {
 
   handleSubmit = () => {
     this.props.quoteUploader('some string', this.props.quotedData, this.props.selectedFile)
-    // console.log(this.props.quotedData);
   }
 
   render() {
@@ -32,8 +31,23 @@ class Quote extends Component {
           </label>
           <br />
           <label>
-            Age:
-            <input type="text" name="Age" onChange={this.handleChange} />
+            # of Source Languages:
+            <select name="Source_Lang" onChange={this.handleChange}>
+              <option value='0'>0</option>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+            </select>
+          </label>
+          <br />
+          <label>
+            # of Target Languages:
+            <select name="Target_Lang" onChange={this.handleChange}>
+              <option value='0'>0</option>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+            </select>
           </label>
           <FileUpload />
           <Button onClick={this.handleSubmit}>Submit</Button>
