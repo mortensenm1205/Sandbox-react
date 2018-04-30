@@ -7,10 +7,13 @@ export function selectedFile(state = null, action) {
   }
 }
 
-export function quoteFormData(state = [], action) {
+export function quoteFormData(state = {}, action) {
   switch(action.type) {
     case 'QUOTE_FORM_DATA_SUCCESS':
-      return action.data
+      return {
+        ...state,
+        ...action.data
+      };
     default:
       return state;
   }
