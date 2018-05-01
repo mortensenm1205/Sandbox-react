@@ -16,7 +16,7 @@ const Home = props => {
     <div>
       <Modal type="Quote"/>
       <Modal type="Apply"/>
-      <CarouselComponent />
+      <CarouselComponent imgType="home_img"/>
       <div style={divDimensions}></div>
     </div>
   );
