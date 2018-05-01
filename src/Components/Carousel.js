@@ -1,38 +1,49 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
+import React, { Component } from 'react';
+import Slider from 'react-slick';
+import axios from 'axios';
+require(process.env.PUBLIC_URL + "css/slick.css");
 
-const CarouselComponent = () => {
-  return (
-    <Carousel
-      autoPlay
-      infiniteLoop
-      interval={2500}
-      showArrows={false}
-      showStatus={false}
-      showThumbs={false}
-      showIndicators={false}
-    >
-      <div>
-        <img
-          alt="placeholder_gray"
-          src={process.env.PUBLIC_URL + '/images/placeholder_gray.png'}
-        />
-      </div>
-      <div>
-        <img
-          alt="placeholder_blue"
-          src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'}
-        />
-      </div>
-      <div>
-        <img
-          alt="placeholder_red"
-          src={process.env.PUBLIC_URL + '/images/placeholder_red.png'}
-        />
-      </div>
-    </Carousel>
-  )
+class CarouselComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imgData: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get('http://reacttranslation.local/wp-json/wp/v2/media')
+    .then(images => this.setState({ imgData: this.state.imgData.concat(images.data)}))
+  }
+
+  render() {
+
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
+
+    return (
+      <Slider {...settings}>
+          <div>
+            <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} />
+          </div>
+          <div>
+            <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} />
+          </div>
+          <div>
+            <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} />
+          </div>
+          <div>
+            <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} />
+          </div>
+      </Slider>
+    )
+  }
+
 }
 
 export default CarouselComponent;
