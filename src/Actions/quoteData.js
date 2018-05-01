@@ -1,11 +1,4 @@
-import axios from 'axios';
-
-export function fileSelectedSuccess(file) {
-  return {
-    type: 'FILE_SELECTED_SUCCESS',
-    file
-  }
-}
+import firebase from '.././firebase';
 
 export function quoteFormDataSuccess(quoteName, quoteInfo) {
   return {
@@ -16,12 +9,7 @@ export function quoteFormDataSuccess(quoteName, quoteInfo) {
   }
 }
 
-export function quoteFormUploader(url, quoteData, sourceDoc) {
-  return (dispatch) => {
-    // axios.post(url, file)
-    //   .then(function(res) {
-    //     console.log(res);
-    //   })
-    console.log(url, quoteData, sourceDoc);
-  }
+export function quoteFormUploader(data) {
+  const quoteRef = firebase.database().ref('quotes');
+  return disptach => quoteRef.push(data);
 }

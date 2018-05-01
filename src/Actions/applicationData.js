@@ -11,7 +11,5 @@ export function applicationDataSuccess(appName, appInfo) {
 
 export function applicationFormDataUpload(data) {
   const appRef = firebase.database().ref('applications');
-  return dispatch => {
-    appRef.push(data)
-  }
+  return appRef.push(data)
 }
