@@ -1,49 +1,46 @@
 import React, { Component } from 'react';
-import Slider from 'react-slick';
-import axios from 'axios';
-require(process.env.PUBLIC_URL + "css/slick.css");
+import Slider from "react-slick";
+import axios from "axios";
 
 class CarouselComponent extends Component {
   constructor(props) {
-    super(props);
-    this.state = {
-      imgData: []
-    };
-  }
+      super(props);
+      this.state = {
+        images: []
+      };
+    }
 
-  componentDidMount() {
-    axios.get('http://reacttranslation.local/wp-json/wp/v2/media')
-    .then(images => this.setState({ imgData: this.state.imgData.concat(images.data)}))
-  }
+    componentDidMount() {
+      axios
+        .get("http://reacttranslationwork.local/wp-json/wp/v2/media")
+        .then(imageData => this.setState({ images: imageData.data }));
+    }
 
-  render() {
+    render() {
+      var settings = {
+        dots: false,
+        arrows: false,
+        autoplay: true
+      };
 
-    var settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
-    };
-
-    return (
-      <Slider {...settings}>
-          <div>
-            <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} />
-          </div>
-          <div>
-            <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} />
-          </div>
-          <div>
-            <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} />
-          </div>
-          <div>
-            <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} />
-          </div>
-      </Slider>
-    )
-  }
-
+      var { imgType } = this.props;
+      return (
+        <div className="container">
+          <Slider {...settings}>
+              {this.state.images.map(function(image) {
+                if (image.alt_text === imgType) {
+                  return <div key={image.id}>
+                    <img
+                    style={{ width: "95%", display: "block", margin: "auto" }}
+                    src={image.source_url}
+                    alt={image.alt_text} />
+                  </div>
+                }
+              })}
+          </Slider>
+        </div>
+      );
+    }
 }
 
 export default CarouselComponent;

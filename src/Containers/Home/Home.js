@@ -1,7 +1,7 @@
 import React from "react";
 import CarouselComponent from "../../Components/Carousel";
 import Modal from "../../Components/Modal";
-// import PostCard from "../../Components/Post_card";
+import PostCard from "../../Components/PostCard";
 
 const divDimensions = {
   height: '450px',
@@ -16,8 +16,9 @@ const Home = props => {
     <div>
       <Modal type="Quote"/>
       <Modal type="Apply"/>
-      <CarouselComponent />
+      <CarouselComponent imgType="home_img"/>
       <div style={divDimensions}></div>
+      <PostCard />
     </div>
   );
 };

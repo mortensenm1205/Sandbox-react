@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import FileUpload from './FileUpload';
 import { quoteFormDataSuccess, quoteFormUploader } from '../Actions/quoteData';
 import { Button } from 'react-bootstrap';
 
@@ -12,7 +11,8 @@ class Quote extends Component {
   }
 
   handleSubmit = () => {
-    this.props.quoteUploader('some string', this.props.quotedData, this.props.selectedFile)
+    this.props.quoteUploader(this.props.quotedData);
+    console.log(this.props.selectedFile);
   }
 
   render() {
@@ -49,7 +49,10 @@ class Quote extends Component {
               <option value='3'>3</option>
             </select>
           </label>
-          <FileUpload />
+          <label>
+            Upload your Source Document:
+            <input type="file" name="Source_doc" onChange={this.handleChange}/>
+          </label>
           <Button onClick={this.handleSubmit}>Submit</Button>
         </form>
       </div>
@@ -59,7 +62,6 @@ class Quote extends Component {
 
 const mapStateToProps = state => {
   return {
-    selectedFile: state.selectedFile,
     quotedData: state.quoteFormData
   }
 };
@@ -67,7 +69,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     quoteData: (quoteName, quoteInfo) => dispatch(quoteFormDataSuccess(quoteName, quoteInfo)),
-    quoteUploader: (url, quoteData, sourceDoc) => dispatch(quoteFormUploader(url, quoteData, sourceDoc))
+    quoteUploader: (quoteData) => dispatch(quoteFormUploader(quoteData))
   }
 }
 
