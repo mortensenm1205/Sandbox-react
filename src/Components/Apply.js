@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { applicationDataSuccess } from '../Actions/applicationData';
+import { applicationDataSuccess, applicationFormDataUpload } from '../Actions/applicationData';
 import { Button } from 'react-bootstrap';
 
 class Apply extends Component {
@@ -10,7 +10,7 @@ class Apply extends Component {
   }
 
   handleClick = () => {
-    console.log(this.props.appliedData);
+    this.props.appUpload(this.props.appliedData);
   }
 
   render() {
@@ -73,7 +73,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    appInfo: (appName, appInfo) => dispatch(applicationDataSuccess(appName, appInfo))
+    appInfo: (appName, appInfo) => dispatch(applicationDataSuccess(appName, appInfo)),
+    appUpload: (data) => dispatch(applicationFormDataUpload(data))
   }
 }
 
