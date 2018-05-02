@@ -26,13 +26,13 @@ class CarouselComponent extends Component {
 
       var { imgType } = this.props;
       return (
-        <div className="container">
+        <div className="container" style={{ width: "100%" }}>
           <Slider {...settings}>
               {this.state.images.map(function(image) {
                 if (image.alt_text === imgType) {
-                  return <div key={image.id}>
+                  return <div key={image.id} >
                     <img
-                    style={{ width: "95%", display: "block", margin: "auto" }}
+                    style={{ width: "100%", display: "block", margin: "auto" }}
                     src={image.source_url}
                     alt={image.alt_text} />
                   </div>
