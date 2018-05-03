@@ -1,37 +1,41 @@
 import React from 'react';
-import { Header, Item, StyledRoute } from '../Styled/index';
+import { Header, Nav, UL, Item, StyledRoute, DivAroundLogo } from '../Styled/index';
 import styled from 'styled-components';
 
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
     <Header>
-      <nav>
-        <ul>
-          <Item>
-            <StyledRoute to="/">Home</StyledRoute>
+      <Nav>
+        <UL>
+          <Item logo>
+            <StyledRoute to="/">
+              <DivAroundLogo>
+                <img alt="Logo" src="https://www.freelogodesign.org/img/logo-ex-5.png" />
+              </DivAroundLogo>
+            </StyledRoute>
           </Item>
           <Item>
             <span>Services</span>
-            <ul>
+            <UL>
               <li>
                 <StyledRoute to='/translation'>Translation</StyledRoute>
               </li>
-            </ul>
+            </UL>
           </Item>
           <Item>
-          <span>About</span>
-            <ul>
+            <span>About</span>
+            <UL>
               <li>
                 <StyledRoute to='blog'>Blog</StyledRoute>
               </li>
               <li>
                 <StyledRoute to='ourTeam'>Our Team</StyledRoute>
               </li>
-            </ul>
+            </UL>
           </Item>
-        </ul>
-      </nav>
+        </UL>
+      </Nav>
     </Header>
   )
 }

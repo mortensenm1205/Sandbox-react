@@ -2,6 +2,7 @@ import React from "react";
 import CarouselComponent from "../../Components/Carousel";
 import Modal from "../../Components/Modal";
 import PostCard from "../../Components/PostCard";
+import { ModalTypeDiv } from '../../Styled/index';
 
 const divDimensions = {
   height: '450px',
@@ -14,8 +15,10 @@ const divDimensions = {
 const Home = props => {
   return (
     <div>
-      <Modal type="Quote"/>
-      <Modal type="Apply"/>
+      <ModalTypeDiv>
+        <Modal type="Quote"/>
+        <Modal type="Apply"/>
+      </ModalTypeDiv>
       <CarouselComponent imgType="home_img"/>
       <div style={divDimensions}></div>
       <PostCard />

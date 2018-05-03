@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import configureStore from './Store/configStore';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { Root } from './Styled/index';
 
 const store = configureStore();
 
@@ -12,7 +13,9 @@ render(
     <Router>
       <MuiThemeProvider>
         <Provider store={store} >
-          <App />
+          <Root>
+            <App />
+          </Root>
         </Provider>
       </MuiThemeProvider>
     </Router>,

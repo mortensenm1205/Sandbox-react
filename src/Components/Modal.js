@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from '../Styled/index';
+import { Button, ModalDiv } from '../Styled/index';
 import { Modal } from 'react-bootstrap';
 import ModalType from './ModalType';
 
@@ -24,8 +24,8 @@ class BaseModal extends Component {
 
   render() {
     return (
-      <div>
-        <Button bsSize="large" onClick={this.handleShow}>
+      <ModalDiv>
+        <Button full onClick={this.handleShow}>
           {this.props.type}
         </Button>
         <Modal show={this.state.show} onHide={this.handleClose}>
@@ -39,7 +39,7 @@ class BaseModal extends Component {
             <Button onClick={this.handleClose}>Close</Button>
           </Modal.Footer>
         </Modal>
-      </div>
+      </ModalDiv>
     );
   }
 }

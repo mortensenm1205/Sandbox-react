@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slider from "react-slick";
+import { CarouselDiv, OutterCarouselDiv, CarouselImg } from "../Styled/index";
 import axios from "axios";
 
 class CarouselComponent extends Component {
@@ -10,10 +11,10 @@ class CarouselComponent extends Component {
       };
     }
 
-    // .get("http://reacttranslationwork.local/wp-json/wp/v2/media")
+    // .get("http://reacttranslation.local/wp-json/wp/v2/media")
     componentDidMount() {
       axios
-        .get("http://reacttranslation.local/wp-json/wp/v2/media")
+        .get("http://reacttranslationwork.local/wp-json/wp/v2/media")
         .then(imageData => this.setState({ images: imageData.data }));
     }
 
@@ -26,20 +27,19 @@ class CarouselComponent extends Component {
 
       var { imgType } = this.props;
       return (
-        <div className="container" style={{ width: "100%" }}>
-          <Slider {...settings}>
+        <OutterCarouselDiv>
+          <CarouselDiv {...settings}>
               {this.state.images.map(function(image) {
                 if (image.alt_text === imgType) {
                   return <div key={image.id} >
-                    <img
-                    style={{ width: "100%", display: "block", margin: "auto" }}
+                    <CarouselImg
                     src={image.source_url}
                     alt={image.alt_text} />
                   </div>
                 }
               })}
-          </Slider>
-        </div>
+          </CarouselDiv>
+        </OutterCarouselDiv>
       );
     }
 }
