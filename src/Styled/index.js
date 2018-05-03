@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
+import { Card } from 'material-ui/Card';
 
 /*
   BASE / ROOT STYLING
@@ -12,13 +13,7 @@ export const Root = styled.div`
 /*
   NAVBAR
 */
-export const Header = styled.header`
-  &:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-`;
+export const Header = styled.header``;
 
 export const Nav = Header.extend``;
 
@@ -60,8 +55,10 @@ export const StyledRoute = styled(Link)`
 `;
 
 export const DivAroundLogo = styled.div`
+  height: 150px;
   img {
-    width: 100%;
+    width: 90%;
+    height: 100%;
   }
 `;
 
@@ -109,4 +106,8 @@ export const CarouselDiv = styled(Slider)`
 export const CarouselImg = styled.img`
   width: 100%;
   display: block;
+`;
+
+export const MainCard = styled(Card)`
+  width: 95%;
 `;
