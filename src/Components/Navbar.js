@@ -1,36 +1,38 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Header, Item, StyledRoute } from '../Styled/index';
+import styled from 'styled-components';
+
 
 const NavBar = () => {
   return (
-    <header>
+    <Header>
       <nav>
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            Services
+          <Item>
+            <StyledRoute to="/">Home</StyledRoute>
+          </Item>
+          <Item>
+            <span>Services</span>
             <ul>
               <li>
-                <Link to='/translation'>Translation</Link>
+                <StyledRoute to='/translation'>Translation</StyledRoute>
               </li>
             </ul>
-          </li>
-          <li>
-            About
+          </Item>
+          <Item>
+          <span>About</span>
             <ul>
               <li>
-                <Link to='blog'>Blog</Link>
+                <StyledRoute to='blog'>Blog</StyledRoute>
               </li>
               <li>
-                <Link to='ourTeam'>Our Team</Link>
+                <StyledRoute to='ourTeam'>Our Team</StyledRoute>
               </li>
             </ul>
-          </li>
+          </Item>
         </ul>
       </nav>
-    </header>
+    </Header>
   )
 }
 
