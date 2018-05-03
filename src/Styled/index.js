@@ -6,6 +6,7 @@ export const Header = styled.header`
     content: "";
     clear: both;
     display: table;
+    height: 75px;
   }
 `;
 
@@ -29,4 +30,12 @@ export const StyledRoute = styled(Link)`
   &:hover {
     text-decoration: none;
   }
+`;
+
+export const Button = styled.button`
+  padding: 0.25em 1em;
+  font-size: 2em;
+  border-radius: 6px;
+  background-color: #006dcc;
+  color: white;
 `;

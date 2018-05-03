@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { applicationDataSuccess, applicationFormDataUpload } from '../Actions/applicationData';
-import { Button } from 'react-bootstrap';
+import { Button } from '../Styled/index';
 
 class Apply extends Component {
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Button } from '../Styled/index';
+import { Modal } from 'react-bootstrap';
 import ModalType from './ModalType';
 
 class BaseModal extends Component {

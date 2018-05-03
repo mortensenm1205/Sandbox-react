@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { quoteFormDataSuccess, quoteFormUploader } from '../Actions/quoteData';
-import { Button } from 'react-bootstrap';
+import { Button } from '../Styled/index';
 
 
 class Quote extends Component {
