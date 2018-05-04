@@ -46,6 +46,7 @@ export const Item = styled.li`
 `;
 
 export const Label = styled.label`
+  margin: 5% 0 0;
   font-size: 1.8em;
   cursor: pointer;
 `;
@@ -110,7 +111,10 @@ export const ModalDiv = styled.div`
 
 // MODAL-TYPEjs OUTTER DIV WITHIN HOME CONT.
 export const ModalTypeDiv = styled.div`
+  z-index: 1;
   text-align: center;
+  position: relative;
+  top: 175px;
 `;
 
 // CAROUSELjs OUTTER DIV
