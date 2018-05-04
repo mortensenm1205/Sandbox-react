@@ -11,10 +11,11 @@ class CarouselComponent extends Component {
       };
     }
 
-    // .get("http://reacttranslation.local/wp-json/wp/v2/media")
+    // .get("http://reacttranslationwork.local/wp-json/wp/v2/media")
+
     componentDidMount() {
       axios
-        .get("http://reacttranslationwork.local/wp-json/wp/v2/media")
+        .get("http://reacttranslation.local/wp-json/wp/v2/media")
         .then(imageData => this.setState({ images: imageData.data }));
     }
 

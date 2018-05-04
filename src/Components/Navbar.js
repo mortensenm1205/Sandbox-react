@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header, Nav, UL, Item, StyledRoute, DivAroundLogo } from '../Styled/index';
 import styled from 'styled-components';
+import SingleImage from './SingleImg';
 
 
 const NavBar = (props) => {
@@ -11,7 +12,7 @@ const NavBar = (props) => {
           <Item logo>
             <StyledRoute to="/">
               <DivAroundLogo>
-                <img alt="Logo" src="https://www.freelogodesign.org/img/logo-ex-5.png" />
+                <SingleImage imgType="company_logo" />
               </DivAroundLogo>
             </StyledRoute>
           </Item>
