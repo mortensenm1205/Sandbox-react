@@ -19,6 +19,7 @@ export const Nav = Header.extend``;
 
 export const UL = styled.ul`
   padding: 0;
+  text-align: center;
 `;
 
 export const Item = styled.li`
@@ -26,15 +27,14 @@ export const Item = styled.li`
   margin: 0 0 1.5%;
   list-style: none;
   cursor: pointer;
-  border: ${props => props.logo ? "none" : "1px solid black"};
+  border-bottom: ${props => props.logo ? "none" : "1px solid #eaeaeb"};
   font-size: 2em;
-  text-align: center;
 
-  &:hover ul li {
+  &:hover li {
     display: block;
   }
 
-  ul li {
+  li {
     list-style: none;
     display: none;
     font-size: 0.8em;
@@ -45,28 +45,42 @@ export const Item = styled.li`
   }
 `;
 
+export const Label = styled.label`
+  font-size: 1.8em;
+  cursor: pointer;
+`;
+
+export const Input = styled.input.attrs({
+  type: 'checkbox',
+})`
+  display: none;
+
+  & ~ ${Item} {
+    display: none;
+  }
+
+  &:checked ~ ${Item} {
+    display: block;
+  }
+`;
+
 export const StyledRoute = styled(Link)`
   line-height: 50px;
   color: black;
 
   &:hover {
     text-decoration: none;
+    cursor: pointer;
   }
 `;
 
-export const DivAroundLogo = styled.div`
-  img {
-    width: 90%;
-    height: 100%;
-  }
-`;
 
 /*
-  BASE ELEMENTS
+  BASE ELEMENTS or MULTIPLE USE COMPONENTS
 */
 
 export const Button = styled.button`
-  width: ${props => props.full ? "45%" : "auto"};
+  width: ${props => props.full ? "45%" : "100%"};
   display: ${props => props.full ? "inline" : "block"};
   padding: 0.25em 1em;
   font-size: 1.5em;
@@ -75,6 +89,15 @@ export const Button = styled.button`
   color: white;
 `;
 
+//THIS IS REALLY ONLY APPLICABLE TO OUR SINGLE IMAGE //COMPOENT
+export const DivAroundImages = styled.div`
+  text-align: center;
+
+  img {
+    width: 98%;
+    height: 100%;
+  }
+`;
 
 /*
   COMPONENT SPECIFIC
@@ -93,7 +116,6 @@ export const ModalTypeDiv = styled.div`
 // CAROUSELjs OUTTER DIV
 export const OutterCarouselDiv = styled.div`
   width: 100%;
-  display: none;
 `;
 
 // CAROUSELjs SLIDER COMPONENT
@@ -107,6 +129,7 @@ export const CarouselImg = styled.img`
   display: block;
 `;
 
+// POSTCARDjs ROOT CARD JSX FOR MOBILE
 export const MainCard = styled(Card)`
   width: 95%;
 `;

@@ -35,9 +35,6 @@ class BaseModal extends Component {
           <Modal.Body>
             <ModalType type={this.props.type}/>
           </Modal.Body>
-          <Modal.Footer>
-            <Button onClick={this.handleClose}>Close</Button>
-          </Modal.Footer>
         </Modal>
       </ModalDiv>
     );

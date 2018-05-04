@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Slider from "react-slick";
 import { CarouselDiv, OutterCarouselDiv, CarouselImg } from "../Styled/index";
 import { connect } from 'react-redux';
 import { imagesRetrival } from '../Actions/imgSelection';
