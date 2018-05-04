@@ -1,17 +1,17 @@
 import axios from 'axios';
 
-export function singleImageSelection(image) {
+export function imagesSelection(images) {
   return {
     type: "SINGLE_IMAGE_SELECTION",
-    image
+    images
   };
 };
 
-export function singleImageRetrive(url) {
+export function imagesRetrival(url) {
   return (dispatch) => {
     axios.get(url)
       .then(function(image) {
-        dispatch(singleImageSelection(image.data))
+        dispatch(imagesSelection(image.data))
       });
   };
 };

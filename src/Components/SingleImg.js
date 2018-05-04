@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { singleImageRetrive } from '../Actions/imgSelection';
+import { imagesRetrival } from '../Actions/imgSelection';
 import { connect } from 'react-redux';
 
 class SingleImage extends Component {
 
   componentDidMount() {
-    this.props.singleImage("http://reacttranslation.local/wp-json/wp/v2/media");
+    // this.props.images("http://reacttranslation.local/wp-json/wp/v2/media");
+    this.props.images("http://reacttranslationwork.local/wp-json/wp/v2/media");
   }
 
   render() {
@@ -13,6 +14,7 @@ class SingleImage extends Component {
     return (
       <div>
         {this.props.imageData.map(function(image) {
+          if(image.alt_text === imgType) {
             return (
               <div key={image.id}>
                 <img
@@ -20,6 +22,7 @@ class SingleImage extends Component {
                 alt={image.alt_text} />
               </div>
             )
+          }
         })}
       </div>
     )
@@ -28,13 +31,13 @@ class SingleImage extends Component {
 
 const mapStateToProps = state => {
   return {
-    imageData: state.singleImage
+    imageData: state.images
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    singleImage: (url) => dispatch(singleImageRetrive(url))
+    images: (url) => dispatch(imagesRetrival(url))
   }
 }
 

@@ -1,7 +1,7 @@
-export function singleImage(state = [], action) {
+export function images(state = [], action) {
   switch (action.type) {
     case "SINGLE_IMAGE_SELECTION":
-      return action.image;
+      return action.images;
     default:
       return state;
   }

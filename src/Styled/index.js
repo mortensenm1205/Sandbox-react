@@ -55,7 +55,6 @@ export const StyledRoute = styled(Link)`
 `;
 
 export const DivAroundLogo = styled.div`
-  height: 150px;
   img {
     width: 90%;
     height: 100%;
