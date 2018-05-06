@@ -5,10 +5,10 @@ import { imagesRetrival } from '../Actions/imgSelection';
 
 class CarouselComponent extends Component {
 
-    // this.props.images("http://reacttranslation.local/wp-json/wp/v2/media")
 
     componentDidMount() {
-      this.props.images("http://reacttranslationwork.local/wp-json/wp/v2/media")
+      // this.props.images("http://reacttranslationwork.local/wp-json/wp/v2/media");
+      this.props.images("http://reacttranslation.local/wp-json/wp/v2/media");
     }
 
     render() {

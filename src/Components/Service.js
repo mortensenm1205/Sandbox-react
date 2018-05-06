@@ -1,7 +1,9 @@
-import React from 'react';
+import React from "react";
 import Modal from "./Modal";
 import CarouselComponent from "./Carousel";
-import { ModalTypeDiv } from '../Styled/index';
+import { ModalTypeDiv } from "../Styled/index";
+import FontAwesomeIcon from "@fortawesome/react-fontawesome";
+import faBook from "@fortawesome/fontawesome-free-solid/faBook";
 
 const Service = (props) => {
   return (
@@ -13,10 +15,9 @@ const Service = (props) => {
       </ModalTypeDiv>
       <CarouselComponent imgType={props.carouselImgs} />
       <div>
-        <img src={props.typeImg} alt={props.typeServ} />
+        <FontAwesomeIcon icon={faBook} size="3x" />
       </div>
       <div>
-        <img src={props.areaServ} alt={props.typeServ} />
       </div>
     </div>
   )

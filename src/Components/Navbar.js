@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Nav, UL, Item, StyledRoute, DivAroundImages, Label, Input } from '../Styled/index';
+import { Header, Nav, UL, Item, StyledRoute, ImageDivAroundLogo, Label, Input } from '../Styled/index';
 import SingleImage from './SingleImg';
 
 
@@ -10,9 +10,9 @@ const NavBar = (props) => {
         <UL>
           <Item logo>
             <StyledRoute to="/">
-              <DivAroundImages>
+              <ImageDivAroundLogo>
                 <SingleImage imgType="company_logo" />
-              </DivAroundImages>
+              </ImageDivAroundLogo>
             </StyledRoute>
           </Item>
           <Label htmlFor="toggle">&#9776;</Label>

@@ -12,8 +12,6 @@ const Services = props => {
           return <Service
             typeServ='Translation'
             carouselImgs="translation_service"
-            typeImg={process.env.PUBLIC_URL + '/images/placeholder_red.png'}
-            areaServ={process.env.PUBLIC_URL + '/images/placeholder_gray.png'}
           />;
         }}
       />

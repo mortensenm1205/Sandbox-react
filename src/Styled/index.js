@@ -8,6 +8,7 @@ import { Card } from 'material-ui/Card';
 */
 export const Root = styled.div`
   padding: 2%;
+  max-width: 1100px;
 `;
 
 /*
@@ -81,8 +82,8 @@ export const StyledRoute = styled(Link)`
 */
 
 export const Button = styled.button`
-  width: ${props => props.full ? "45%" : "100%"};
-  display: ${props => props.full ? "inline" : "block"};
+  width: ${props => props.full ? "95%" : "45%"};
+  display: ${props => props.full ? "block" : "inline"};
   padding: 0.25em 1em;
   font-size: 1.5em;
   border-radius: 6px;
@@ -91,18 +92,16 @@ export const Button = styled.button`
 `;
 
 //THIS IS REALLY ONLY APPLICABLE TO OUR SINGLE IMAGE //COMPOENT
-export const DivAroundImages = styled.div`
-  text-align: center;
 
-  img {
-    width: 98%;
-    height: 100%;
-  }
-`;
 
 /*
   COMPONENT SPECIFIC
 */
+
+//HOME PAGE DIV, ADJUSTING TO FIXED WIDTH
+export const HomeDiv = styled.div`
+  width: 100%;
+`;
 
 // MODALjs OUTTER DIV
 export const ModalDiv = styled.div`
@@ -112,9 +111,9 @@ export const ModalDiv = styled.div`
 // MODAL-TYPEjs OUTTER DIV WITHIN HOME CONT.
 export const ModalTypeDiv = styled.div`
   z-index: 1;
-  text-align: center;
   position: relative;
   top: 175px;
+  left: 10px;
 `;
 
 // CAROUSELjs OUTTER DIV
@@ -136,4 +135,23 @@ export const CarouselImg = styled.img`
 // POSTCARDjs ROOT CARD JSX FOR MOBILE
 export const MainCard = styled(Card)`
   width: 95%;
+`;
+
+// FULLSCREEN BACKGROUND IMAGE(S)
+export const FScreenImgDiv = styled.div`
+    overflow: hidden;
+
+    img {
+      width: 200%;
+    }
+`;
+
+// FOR DIV AROUND LOGO IMAGE IN NAVBARjs
+export const ImageDivAroundLogo = styled.div`
+  text-align: center;
+
+  img {
+    width: 98%;
+    height: 100%;
+  }
 `;

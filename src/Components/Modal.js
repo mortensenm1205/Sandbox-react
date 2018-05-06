@@ -25,9 +25,17 @@ class BaseModal extends Component {
   render() {
     return (
       <ModalDiv>
-        <Button full onClick={this.handleShow}>
-          {this.props.type}
-        </Button>
+        {this.props.type === "Quote" ? (
+            <Button full onClick={this.handleShow}>
+              Click for a Quote today!
+            </Button>
+          ) : (
+            <Button full onClick={this.handleShow}>
+              Apply for Translation!
+            </Button>
+          )
+        }
+
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Modal Heading</Modal.Title>

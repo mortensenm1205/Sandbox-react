@@ -4,7 +4,7 @@ import CarouselComponent from "../../Components/Carousel";
 import SingleImage from '../../Components/SingleImg';
 import Modal from "../../Components/Modal";
 import PostCard from "../../Components/PostCard";
-import { ModalTypeDiv, DivAroundImages } from '../../Styled/index';
+import { ModalTypeDiv, FScreenImgDiv } from '../../Styled/index';
 
 const divDimensions = {
   height: '450px',
@@ -19,16 +19,15 @@ const Home = props => {
     <div>
       <ModalTypeDiv>
         <Modal type="Quote"/>
-        <Modal type="Apply"/>
       </ModalTypeDiv>
       <Media query="(min-width: 800px)">
         {matches =>
           matches ? (
             <CarouselComponent imgType="home_img"/>
           ) : (
-            <DivAroundImages>
+            <FScreenImgDiv>
               <SingleImage imgType="mobile_home_img" />
-            </DivAroundImages>
+            </FScreenImgDiv>
           )
         }
       </Media>
