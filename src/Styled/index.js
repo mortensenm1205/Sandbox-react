@@ -7,7 +7,6 @@ import { Card } from 'material-ui/Card';
   BASE / ROOT STYLING
 */
 export const Root = styled.div`
-  padding: 2%;
   max-width: 1100px;
 `;
 
@@ -85,35 +84,54 @@ export const Button = styled.button`
   width: ${props => props.full ? "95%" : "45%"};
   display: ${props => props.full ? "block" : "inline"};
   padding: 0.25em 1em;
+  margin: 0 0 0.8em 0;
   font-size: 1.5em;
   border-radius: 6px;
   background-color: #006dcc;
   color: white;
 `;
 
-//THIS IS REALLY ONLY APPLICABLE TO OUR SINGLE IMAGE //COMPOENT
-
+export const BlackFade =styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .4;
+  z-index-1;
+`;
 
 /*
   COMPONENT SPECIFIC
 */
 
-//HOME PAGE DIV, ADJUSTING TO FIXED WIDTH
-export const HomeDiv = styled.div`
+//HOME PAGE DIV, NEEDED MY MODAL BUTTON TO
+//POSITION ITSELF AROUND THIS DIV
+export const OutterHomeDiv = styled.div`
   width: 100%;
+  position: relative;
 `;
 
 // MODALjs OUTTER DIV
 export const ModalDiv = styled.div`
   display: inline;
 `;
+// SERVICEjs OUTTER DIV
+export const OutterServiceTypeDiv = styled.div`
+  position: relative;
+`;
+
+// SERVICEjs H1 EL
+export const ServiceHeader = styled.h1`
+  text-align: center;
+`;
 
 // MODAL-TYPEjs OUTTER DIV WITHIN HOME CONT.
 export const ModalTypeDiv = styled.div`
   z-index: 1;
-  position: relative;
-  top: 175px;
-  left: 10px;
+  position: absolute;
+  top: 245px;
+  left: 85px;
 `;
 
 // CAROUSELjs OUTTER DIV
@@ -140,6 +158,7 @@ export const MainCard = styled(Card)`
 // FULLSCREEN BACKGROUND IMAGE(S)
 export const FScreenImgDiv = styled.div`
     overflow: hidden;
+    position: relative;
 
     img {
       width: 200%;
@@ -154,4 +173,9 @@ export const ImageDivAroundLogo = styled.div`
     width: 98%;
     height: 100%;
   }
+`;
+
+// FOR MAIN DIV ON SINGLE IMG COMPONENT
+export const OutterSingleImageDiv = styled.div`
+  padding: 0;
 `;

@@ -4,7 +4,7 @@ import CarouselComponent from "../../Components/Carousel";
 import SingleImage from '../../Components/SingleImg';
 import Modal from "../../Components/Modal";
 import PostCard from "../../Components/PostCard";
-import { ModalTypeDiv, FScreenImgDiv } from '../../Styled/index';
+import { ModalTypeDiv, FScreenImgDiv, BlackFade, OutterHomeDiv } from '../../Styled/index';
 
 const divDimensions = {
   height: '450px',
@@ -16,7 +16,7 @@ const divDimensions = {
 
 const Home = props => {
   return (
-    <div>
+    <OutterHomeDiv>
       <ModalTypeDiv>
         <Modal type="Quote"/>
       </ModalTypeDiv>
@@ -27,13 +27,14 @@ const Home = props => {
           ) : (
             <FScreenImgDiv>
               <SingleImage imgType="mobile_home_img" />
+              <BlackFade />
             </FScreenImgDiv>
           )
         }
       </Media>
       <div style={divDimensions}></div>
       <PostCard />
-    </div>
+    </OutterHomeDiv>
   );
 };
 
