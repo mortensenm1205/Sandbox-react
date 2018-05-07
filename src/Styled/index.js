@@ -138,7 +138,7 @@ export const OurClientsImageDiv = styled.div`
 // HANDLING THE CONTEXT HEADINGS IN HOMEjs
 export const ContextHeading = styled.h3`
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2.2em;
   font-weight: bold;
   margin: 35px 0;
 `;
@@ -157,6 +157,7 @@ export const SeperatedDiv = styled.div`
 export const ModalDiv = styled.div`
   display: inline;
 `;
+
 // SERVICEjs OUTTER DIV
 export const OutterServiceTypeDiv = styled.div`
   position: relative;
@@ -164,7 +165,25 @@ export const OutterServiceTypeDiv = styled.div`
 
 // SERVICEjs H1 EL
 export const ServiceHeader = styled.h1`
+  margin: 8% 0;
   text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
+`;
+
+//SERVICEjs div's around the icons and description.
+export const TypeServiceDiv = styled.div`
+  text-align: center;
+  margin: 0 0 20px;
+
+  span {
+    display: block;
+    line-height: 50px;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: bold;
+  }
 `;
 
 // MODAL-TYPEjs OUTTER DIV WITHIN HOME CONT.

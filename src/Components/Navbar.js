@@ -31,9 +31,6 @@ const NavBar = (props) => {
               <li>
                 <StyledRoute to='blog'>Blog</StyledRoute>
               </li>
-              <li>
-                <StyledRoute to='ourTeam'>Our Team</StyledRoute>
-              </li>
             </UL>
           </Item>
         </UL>

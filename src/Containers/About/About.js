@@ -15,13 +15,6 @@ const About = props => {
           return <Blog />;
         }}
       />
-      <Route
-        exact
-        path="/ourTeam"
-        render={() => {
-          return <h1>Hello again</h1>;
-        }}
-      />
     </div>
   );
 };

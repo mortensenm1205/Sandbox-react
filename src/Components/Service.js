@@ -2,10 +2,12 @@ import React from "react";
 import Modal from "./Modal";
 import Media from 'react-media';
 import CarouselComponent from "./Carousel";
-import { ModalTypeDiv, FScreenImgDiv, BlackFade, OutterServiceTypeDiv, ServiceHeader } from "../Styled/index";
+import { ModalTypeDiv, FScreenImgDiv, BlackFade, OutterServiceTypeDiv, ServiceHeader, ContextHeading, TypeServiceDiv } from "../Styled/index";
 import SingleImage from "./SingleImg";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faBook from "@fortawesome/fontawesome-free-solid/faBook";
+import faFileAlt from "@fortawesome/fontawesome-free-solid/faFileAlt";
+import faCertificate from "@fortawesome/fontawesome-free-solid/faCertificate";
 
 const Service = (props) => {
   return (
@@ -27,7 +29,19 @@ const Service = (props) => {
           )}
       </Media>
       <div>
-        <FontAwesomeIcon icon={faBook} size="3x" />
+        <ContextHeading> Type of Translation we do: </ContextHeading>
+        <TypeServiceDiv>
+          <FontAwesomeIcon icon={faBook} size="4x" />
+          <span>Manuals</span>
+        </TypeServiceDiv>
+        <TypeServiceDiv>
+          <FontAwesomeIcon icon={faFileAlt} size="4x" />
+          <span>Word Documents</span>
+        </TypeServiceDiv>
+        <TypeServiceDiv>
+          <FontAwesomeIcon icon={faCertificate} size="4x" />
+          <span>Birth Certificates</span>
+        </TypeServiceDiv>
       </div>
     </OutterServiceTypeDiv>
   )
