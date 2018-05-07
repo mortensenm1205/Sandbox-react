@@ -45,10 +45,33 @@ export const Item = styled.li`
   }
 `;
 
+// FOR DIV AROUND LOGO IMAGE IN NAVBARjs
+export const ImageDivAroundLogo = styled.div`
+  text-align: center;
+  display: inline-block;
+
+  @media (min-width: 800px) {
+    border: 2px solid red;
+  }
+
+  img {
+    width: 98%;
+    height: 100%;
+
+    @media (min-width: 800px) {
+      width: 48%;
+    }
+  }
+`;
+
 export const Label = styled.label`
   margin: 5% 0 0;
   font-size: 1.8em;
   cursor: pointer;
+
+  @media (min-width: 800px) {
+    display: none;
+  }
 `;
 
 export const Input = styled.input.attrs({
@@ -58,10 +81,17 @@ export const Input = styled.input.attrs({
 
   & ~ ${Item} {
     display: none;
+    @media (min-width: 800px) {
+      display: block;
+    }
   }
 
   &:checked ~ ${Item} {
     display: block;
+  }
+
+  @media (min-width: 800px) {
+    display: none;
   }
 `;
 
@@ -230,15 +260,7 @@ export const FScreenImgDiv = styled.div`
     }
 `;
 
-// FOR DIV AROUND LOGO IMAGE IN NAVBARjs
-export const ImageDivAroundLogo = styled.div`
-  text-align: center;
 
-  img {
-    width: 98%;
-    height: 100%;
-  }
-`;
 
 // FOR MAIN DIV ON SINGLE IMG COMPONENT
 export const OutterSingleImageDiv = styled.div`

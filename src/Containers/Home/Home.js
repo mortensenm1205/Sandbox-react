@@ -38,7 +38,7 @@ class Home extends Component {
           {this.props.imageData.map(function(image) {
             if( image.alt_text === imgType ) {
               return (
-                <OurClientsImageDiv key={image.key}>
+                <OurClientsImageDiv key={image.id}>
                   <img
                   src={image.source_url}
                   alt={image.alt_text} />
