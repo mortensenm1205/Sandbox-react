@@ -13,7 +13,7 @@ const App = () => {
       <Route
         exact
         path="/"
-        component={Home}
+        render={() => <Home imgType="our_clients"/>}
       />
       {/*
         Placed <About /> and <Service /> in here and moved the corresponding routes to that

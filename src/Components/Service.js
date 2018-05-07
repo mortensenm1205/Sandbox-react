@@ -29,8 +29,6 @@ const Service = (props) => {
       <div>
         <FontAwesomeIcon icon={faBook} size="3x" />
       </div>
-      <div>
-      </div>
     </OutterServiceTypeDiv>
   )
 };

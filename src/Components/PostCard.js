@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import renderHTML from 'react-render-html'
-import { MainCard } from '../Styled/index';
+import { MainCardDiv, MainCard } from '../Styled/index';
 import { CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import { connect } from 'react-redux';
 import { postsFetchData } from '../Actions/posts';
@@ -19,7 +19,7 @@ class PostCard extends Component {
   render() {
 
     return (
-      <div>
+      <MainCardDiv>
       {this.props.posts.map(function(post) {
         return (
           <MainCard key={post.id}>
@@ -35,7 +35,7 @@ class PostCard extends Component {
           </MainCard>
         )
       })}
-      </div>
+      </MainCardDiv>
     )
   }
 }

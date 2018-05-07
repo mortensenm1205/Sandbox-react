@@ -77,6 +77,21 @@ export const StyledRoute = styled(Link)`
 
 
 /*
+  FOOTER
+*/
+
+export const MainFooterDiv = styled.div`
+  background-color: #000;
+  color: white;
+  padding: 3%;
+  text-align: center;
+`;
+
+export const SimpleContactStyle = styled.span`
+  padding: 0 10px 0;
+`;
+
+/*
   BASE ELEMENTS or MULTIPLE USE COMPONENTS
 */
 
@@ -110,6 +125,32 @@ export const BlackFade =styled.div`
 export const OutterHomeDiv = styled.div`
   width: 100%;
   position: relative;
+`;
+// ALL THIS IS DOING IS SETTING UP THE
+// OUR CLIENTS SECTION WITHIN HOMEjs
+export const OurClientsImageDiv = styled.div`
+  text-align: center;
+  img {
+    width: 55%;
+    margin: 20px 0;
+  }
+`;
+// HANDLING THE CONTEXT HEADINGS IN HOMEjs
+export const ContextHeading = styled.h3`
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 35px 0;
+`;
+
+export const CustomContextHeading = ContextHeading.extend`
+  padding-top: 25px;
+`;
+
+// TO KEEP THE LOOK OF SEPERATED COMPONETS
+export const SeperatedDiv = styled.div`
+  background-color: #e8e8e8ba;
+  padding: 0 0 55px;
 `;
 
 // MODALjs OUTTER DIV
@@ -151,8 +192,13 @@ export const CarouselImg = styled.img`
 `;
 
 // POSTCARDjs ROOT CARD JSX FOR MOBILE
-export const MainCard = styled(Card)`
+export const MainCardDiv = styled.div`
   width: 95%;
+  margin: 0 auto;
+`;
+
+export const MainCard = styled(Card)`
+  margin: 0 0 20px;
 `;
 
 // FULLSCREEN BACKGROUND IMAGE(S)
