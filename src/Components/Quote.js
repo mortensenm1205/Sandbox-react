@@ -12,7 +12,6 @@ class Quote extends Component {
 
   handleSubmit = () => {
     this.props.quoteUploader(this.props.quotedData);
-    console.log(this.props.selectedFile);
   }
 
   render() {

@@ -21,6 +21,19 @@ export const UL = styled.ul`
   padding: 0;
   text-align: center;
 `;
+// FOR DIV AROUND LOGO IMAGE IN NAVBARjs
+export const ImageDivAroundLogo = styled.div`
+  text-align: center;
+
+  img {
+    width: 98%;
+    height: 100%;
+
+    @media (min-width: 800px) {
+      width: 50%;
+    }
+  }
+`;
 
 export const Item = styled.li`
   padding: 0 3%;
@@ -43,26 +56,13 @@ export const Item = styled.li`
   span {
     line-height: 50px;
   }
-`;
 
-// FOR DIV AROUND LOGO IMAGE IN NAVBARjs
-export const ImageDivAroundLogo = styled.div`
-  text-align: center;
-  display: inline-block;
-
-  @media (min-width: 800px) {
-    border: 2px solid red;
-  }
-
-  img {
-    width: 98%;
-    height: 100%;
-
-    @media (min-width: 800px) {
-      width: 48%;
-    }
+  @media ( min-width:800px ) {
+    display: inline-block;
   }
 `;
+
+
 
 export const Label = styled.label`
   margin: 5% 0 0;
@@ -81,17 +81,15 @@ export const Input = styled.input.attrs({
 
   & ~ ${Item} {
     display: none;
+
     @media (min-width: 800px) {
-      display: block;
+      display: inline-block;
+      border: 2px solid red;
     }
   }
 
   &:checked ~ ${Item} {
     display: block;
-  }
-
-  @media (min-width: 800px) {
-    display: none;
   }
 `;
 
@@ -102,6 +100,10 @@ export const StyledRoute = styled(Link)`
   &:hover {
     text-decoration: none;
     cursor: pointer;
+  }
+
+  @media (min-width: 800px) {
+    display: inline-block;
   }
 `;
 
