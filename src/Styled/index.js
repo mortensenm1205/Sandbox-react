@@ -34,7 +34,8 @@ export const ImageDivAroundLogo = styled.div`
     }
   }
 `;
-
+// LI ELEMENTS ON THE NAV BUT NOT THE INNER LI EL'S
+// BUT WE DO TARGET IT AND OTHER CHILD EL'S OF ITEM
 export const Item = styled.li`
   padding: 0 3%;
   margin: 0 0 1.5%;
@@ -63,7 +64,8 @@ export const Item = styled.li`
 `;
 
 
-
+// FOR THE MOBILE MENU, IT BELONGS TO INPUT
+// HIDING IT AFTER 800PX
 export const Label = styled.label`
   margin: 5% 0 0;
   font-size: 1.8em;
@@ -73,7 +75,11 @@ export const Label = styled.label`
     display: none;
   }
 `;
-
+//THE INPUT THAT TURNS THE MENU ON AND OFF
+//WE HAVE TO TARGET THE SIBLING ITEMS AFTER
+//THIS INPUT TO GET THEM TO HIDE
+//..AT THIS TIME TRYING TO HAVE THEM HOVER
+//CORRECTLY IS DIFFICULT
 export const Input = styled.input.attrs({
   type: 'checkbox',
 })`
@@ -93,6 +99,9 @@ export const Input = styled.input.attrs({
   }
 `;
 
+//THIS IS THE LINK EL THAT GOES WITH ROUTER
+//I WAS THINKING THAT I MAY HAVE TO TARGET
+//SOME INNER ELEMENTS HERE.
 export const StyledRoute = styled(Link)`
   line-height: 50px;
   color: black;
@@ -109,47 +118,7 @@ export const StyledRoute = styled(Link)`
 
 
 /*
-  FOOTER
-*/
-
-export const MainFooterDiv = styled.div`
-  background-color: #000;
-  color: white;
-  padding: 3%;
-  text-align: center;
-`;
-
-export const SimpleContactStyle = styled.span`
-  padding: 0 10px 0;
-`;
-
-/*
-  BASE ELEMENTS or MULTIPLE USE COMPONENTS
-*/
-
-export const Button = styled.button`
-  width: ${props => props.full ? "95%" : "45%"};
-  display: ${props => props.full ? "block" : "inline"};
-  padding: 0.25em 1em;
-  margin: 0 0 0.8em 0;
-  font-size: 1.5em;
-  border-radius: 6px;
-  background-color: #006dcc;
-  color: white;
-`;
-
-export const BlackFade =styled.div`
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: .4;
-  z-index-1;
-`;
-
-/*
-  COMPONENT SPECIFIC
+  HOME PAGE
 */
 
 //HOME PAGE DIV, NEEDED MY MODAL BUTTON TO
@@ -174,7 +143,8 @@ export const ContextHeading = styled.h3`
   font-weight: bold;
   margin: 35px 0;
 `;
-
+// NEEDED TO EXTEND SOME STYLES ON A CERTAIN
+// COMPONENT TO WORK WITH THE FOOTER
 export const CustomContextHeading = ContextHeading.extend`
   padding-top: 25px;
 `;
@@ -185,10 +155,41 @@ export const SeperatedDiv = styled.div`
   padding: 0 0 55px;
 `;
 
+
+/*
+  FOOTER
+*/
+
+export const MainFooterDiv = styled.div`
+  background-color: #000;
+  color: white;
+  padding: 3%;
+  text-align: center;
+`;
+
+export const SimpleContactStyle = styled.span`
+  padding: 0 10px 0;
+`;
+
+/*
+  MODAL
+*/
+
 // MODALjs OUTTER DIV
 export const ModalDiv = styled.div`
   display: inline;
 `;
+// MODAL-TYPEjs OUTTER DIV WITHIN HOME CONT.
+export const ModalTypeDiv = styled.div`
+  z-index: 1;
+  position: absolute;
+  top: 245px;
+  left: 85px;
+`;
+
+/*
+  SERVICE
+*/
 
 // SERVICEjs OUTTER DIV
 export const OutterServiceTypeDiv = styled.div`
@@ -218,13 +219,9 @@ export const TypeServiceDiv = styled.div`
   }
 `;
 
-// MODAL-TYPEjs OUTTER DIV WITHIN HOME CONT.
-export const ModalTypeDiv = styled.div`
-  z-index: 1;
-  position: absolute;
-  top: 245px;
-  left: 85px;
-`;
+/*
+  CAROUSEL
+*/
 
 // CAROUSELjs OUTTER DIV
 export const OutterCarouselDiv = styled.div`
@@ -242,14 +239,46 @@ export const CarouselImg = styled.img`
   display: block;
 `;
 
+
+/*
+  CARD
+*/
+
 // POSTCARDjs ROOT CARD JSX FOR MOBILE
 export const MainCardDiv = styled.div`
   width: 95%;
   margin: 0 auto;
 `;
-
+// DIFFERENCE HERE IS THE MAIN CARD IS PART
+// OF THE CARD COMPONENT AND MAINCARDDIV IS JUST
+// THE DIV THAT SURROUNDS IT
 export const MainCard = styled(Card)`
   margin: 0 0 20px;
+`;
+
+/*
+  MULTIPLE USE COMPONENTS
+*/
+
+export const Button = styled.button`
+  width: ${props => props.full ? "95%" : "45%"};
+  display: ${props => props.full ? "block" : "inline"};
+  padding: 0.25em 1em;
+  margin: 0 0 0.8em 0;
+  font-size: 1.5em;
+  border-radius: 6px;
+  background-color: #006dcc;
+  color: white;
+`;
+
+export const BlackFade =styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .4;
+  z-index-1;
 `;
 
 // FULLSCREEN BACKGROUND IMAGE(S)
@@ -261,8 +290,6 @@ export const FScreenImgDiv = styled.div`
       width: 200%;
     }
 `;
-
-
 
 // FOR MAIN DIV ON SINGLE IMG COMPONENT
 export const OutterSingleImageDiv = styled.div`
