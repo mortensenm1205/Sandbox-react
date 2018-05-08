@@ -4,15 +4,15 @@ import CarouselComponent from "../../Components/Carousel";
 import SingleImage from '../../Components/SingleImg';
 import Modal from "../../Components/Modal";
 import PostCard from "../../Components/PostCard";
-import { ModalTypeDiv, FScreenImgDiv, BlackFade, OutterHomeDiv, OurClientsImageDiv, ContextHeading, CustomContextHeading, SeperatedDiv } from '../../Styled/index';
+import { ModalTypeDiv, FScreenImgDiv, BlackFade, OutterHomeDiv, OurClientsImageDiv, ContextHeading, CustomContextHeading, SeperatedDiv, DivAroundClientsImages } from '../../Styled/index';
 import { imagesRetrival } from "../../Actions/imgSelection";
 import { connect } from 'react-redux';
 
 class Home extends Component {
 
   componentDidMount() {
-    // this.props.images("http://reacttranslationwork.local/wp-json/wp/v2/media")
-    this.props.images("http://reacttranslation.local/wp-json/wp/v2/media")
+    this.props.images("http://reacttranslationwork.local/wp-json/wp/v2/media")
+    // this.props.images("http://reacttranslation.local/wp-json/wp/v2/media")
 
   }
 
@@ -26,7 +26,10 @@ class Home extends Component {
         <Media query="(min-width: 800px)">
           {matches =>
             matches ? (
-              <CarouselComponent imgType="home_img"/>
+              <FScreenImgDiv>
+                <CarouselComponent imgType="home_img"/>
+                <BlackFade />
+              </FScreenImgDiv>
             ) : (
               <FScreenImgDiv>
                 <SingleImage imgType="mobile_home_img" />
@@ -37,6 +40,7 @@ class Home extends Component {
         </Media>
         <div>
           <ContextHeading> Our partners: </ContextHeading>
+          <DivAroundClientsImages>
           {this.props.imageData.map(function(image) {
             if( image.alt_text === imgType ) {
               return (
@@ -48,6 +52,7 @@ class Home extends Component {
               )
             }
           })}
+          </DivAroundClientsImages>
         </div>
         <SeperatedDiv>
           <CustomContextHeading> Recent Blog Posts: </CustomContextHeading>

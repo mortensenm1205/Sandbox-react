@@ -20,7 +20,10 @@ const Service = (props) => {
       <Media query="(min-width: 800px)">
         {matches =>
           matches ? (
-            <CarouselComponent imgType={props.carouselImgs} />
+            <FScreenImgDiv>
+              <CarouselComponent imgType={props.carouselImgs} />
+              <BlackFade />
+            </FScreenImgDiv>
           ): (
             <FScreenImgDiv>
               <SingleImage imgType="mobile_home_img" />

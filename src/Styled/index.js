@@ -8,6 +8,7 @@ import { Card } from 'material-ui/Card';
 */
 export const Root = styled.div`
   max-width: 1100px;
+  margin: 0 auto;
 `;
 
 /*
@@ -15,12 +16,20 @@ export const Root = styled.div`
 */
 export const Header = styled.header``;
 
-export const Nav = Header.extend``;
-
-export const UL = styled.ul`
+export const OutterUL = styled.ul`
   padding: 0;
   text-align: center;
+
+  @media (min-width: 800px) {
+    display: inline-block;
+    width: 50%;
+  }
 `;
+
+export const InnerUL = styled.ul`
+  padding: 0;
+`;
+
 // FOR DIV AROUND LOGO IMAGE IN NAVBARjs
 export const ImageDivAroundLogo = styled.div`
   text-align: center;
@@ -28,11 +37,19 @@ export const ImageDivAroundLogo = styled.div`
   img {
     width: 98%;
     height: 100%;
-
-    @media (min-width: 800px) {
-      width: 50%;
-    }
   }
+
+  @media (min-width: 800px) {
+    text-align: left;
+    display: inline-block;
+    width: 35%;
+
+    img {
+      width: 65%;
+    }
+
+  }
+
 `;
 // LI ELEMENTS ON THE NAV BUT NOT THE INNER LI EL'S
 // BUT WE DO TARGET IT AND OTHER CHILD EL'S OF ITEM
@@ -59,7 +76,9 @@ export const Item = styled.li`
   }
 
   @media ( min-width:800px ) {
-    display: inline-block;
+    span {
+      display: block;
+    }
   }
 `;
 
@@ -90,7 +109,8 @@ export const Input = styled.input.attrs({
 
     @media (min-width: 800px) {
       display: inline-block;
-      border: 2px solid red;
+      margin: 3% 5% 0;
+      border-bottom: none;
     }
   }
 
@@ -111,9 +131,6 @@ export const StyledRoute = styled(Link)`
     cursor: pointer;
   }
 
-  @media (min-width: 800px) {
-    display: inline-block;
-  }
 `;
 
 
@@ -127,13 +144,26 @@ export const OutterHomeDiv = styled.div`
   width: 100%;
   position: relative;
 `;
+
+//THE CLIENT IMAGES NEEDED TO BE CNETERED FOR
+//TABLET LAYOUT, SO I WRAPPED IT IN A DIV
+export const DivAroundClientsImages = styled.div`
+  text-align: center;
+`;
+
 // ALL THIS IS DOING IS SETTING UP THE
 // OUR CLIENTS SECTION WITHIN HOMEjs
 export const OurClientsImageDiv = styled.div`
   text-align: center;
+
   img {
     width: 55%;
     margin: 20px 0;
+  }
+
+  @media (min-width: 800px) {
+    width: 30%;
+    display: inline-block;
   }
 `;
 // HANDLING THE CONTEXT HEADINGS IN HOMEjs
@@ -223,20 +253,9 @@ export const TypeServiceDiv = styled.div`
   CAROUSEL
 */
 
-// CAROUSELjs OUTTER DIV
-export const OutterCarouselDiv = styled.div`
-  width: 100%;
-`;
-
 // CAROUSELjs SLIDER COMPONENT
 export const CarouselDiv = styled(Slider)`
   margin: 2% 0;
-`;
-
-// CAROUSELjs IMG THAT BELONGS TO SLIDER COMPONENT
-export const CarouselImg = styled.img`
-  width: 100%;
-  display: block;
 `;
 
 
@@ -248,12 +267,20 @@ export const CarouselImg = styled.img`
 export const MainCardDiv = styled.div`
   width: 95%;
   margin: 0 auto;
+  text-align: center;
 `;
 // DIFFERENCE HERE IS THE MAIN CARD IS PART
 // OF THE CARD COMPONENT AND MAINCARDDIV IS JUST
 // THE DIV THAT SURROUNDS IT
 export const MainCard = styled(Card)`
   margin: 0 0 20px;
+
+  @media (min-width: 800px) {
+    display: inline-block;
+    width: 45%;
+    vertical-align: text-top
+    margin: 0 2% 0 0;
+  }
 `;
 
 /*
@@ -279,16 +306,26 @@ export const BlackFade =styled.div`
   background-color: #000;
   opacity: .4;
   z-index-1;
+
+  @media (min-width:800px) {
+    top: 3px;
+  }
 `;
 
 // FULLSCREEN BACKGROUND IMAGE(S)
 export const FScreenImgDiv = styled.div`
-    overflow: hidden;
     position: relative;
 
     img {
       width: 200%;
+      display: block;
+      overflow: hidden;
+
+      @media (min-width: 800px) {
+        width: 100%;
+      }
     }
+
 `;
 
 // FOR MAIN DIV ON SINGLE IMG COMPONENT
