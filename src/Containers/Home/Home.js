@@ -56,7 +56,7 @@ class Home extends Component {
         </div>
         <SeperatedDiv>
           <CustomContextHeading> Recent Blog Posts: </CustomContextHeading>
-          <PostCard />
+          <PostCard recent/>
         </SeperatedDiv>
       </OutterHomeDiv>
     );
