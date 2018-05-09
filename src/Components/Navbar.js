@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header, OutterUL, InnerUL, Item, StyledRoute, ImageDivAroundLogo, Label, Input } from '../Styled/index';
 import SingleImage from './SingleImg';
-
+  
 
 const NavBar = (props) => {
   return (
