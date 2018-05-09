@@ -1,13 +1,13 @@
 import React from 'react';
 import PostCard from './PostCard';
-import { ServiceHeader } from '../Styled/index';
+import { ServiceHeader, MainBlogDiv } from '../Styled/index';
 
 const Blog = () => {
   return (
-    <div>
+    <MainBlogDiv>
       <ServiceHeader>Blog: </ServiceHeader>
       <PostCard />
-    </div>
+    </MainBlogDiv>
   );
 };
 

@@ -1,20 +1,20 @@
 import React from 'react';
-import { MainFooterDiv, SimpleContactStyle } from '../Styled/index';
+import { MainFooterDiv, SimpleContactStyle, ContactDiv } from '../Styled/index';
 import Media from 'react-media';
 
 const Footer = () => {
   return (
     <MainFooterDiv>
       <h1>Contact Us!</h1>
-      <Media query="(min-wdith: 800px)">
+      <Media query="(min-width: 1100px)">
         {matches =>
           matches ? (
-            <div>
+            <ContactDiv>
               <Email />
               <Phone />
               <Address />
-            </div>
-          ): (
+            </ContactDiv>
+          ) : (
             <SimpleContact />
           )
         }

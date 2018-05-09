@@ -212,6 +212,46 @@ export const SeperatedDiv = styled.div`
   padding: 0 0 55px;
 `;
 
+/*
+  SERVICE
+*/
+
+// SERVICEjs OUTTER DIV
+export const OutterServiceDiv = styled.div`
+  position: relative;
+`;
+
+
+export const OutterServiceTypeDiv = styled.div`
+  text-align: center;
+`;
+
+//SERVICEjs div's around the icons and description.
+export const TypeServiceDiv = styled.div`
+  text-align: center;
+  margin: 0 0 20px;
+
+  span {
+    display: block;
+    line-height: 50px;
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  @media (min-width:750px) {
+    display: inline-block;
+    margin: 3%;
+  }
+`;
+
+/*
+  BLOG
+*/
+
+export const MainBlogDiv = styled.div`
+  padding: 0 0 10% 0;
+`;
 
 /*
   FOOTER
@@ -222,6 +262,20 @@ export const MainFooterDiv = styled.div`
   color: white;
   padding: 3%;
   text-align: center;
+
+  @media (min-width:1100px) {
+    text-align: left;
+  }
+`;
+
+export const ContactDiv = styled.div`
+
+  & > div {
+    vertical-align: text-top;
+    display: inline-block;
+    width: 20%;
+    margin: 0 5%;
+  }
 `;
 
 export const SimpleContactStyle = styled.span`
@@ -255,46 +309,7 @@ export const ModalTypeDiv = styled.div`
   }
 `;
 
-/*
-  SERVICE
-*/
 
-// SERVICEjs OUTTER DIV
-export const OutterServiceDiv = styled.div`
-  position: relative;
-`;
-
-// SERVICEjs H1 EL
-export const ServiceHeader = styled.h1`
-  margin: 8% 0;
-  text-align: center;
-  font-size: 4em;
-  font-weight: bold;
-  font-style: italic;
-`;
-
-export const OutterServiceTypeDiv = styled.div`
-  text-align: center;
-`;
-
-//SERVICEjs div's around the icons and description.
-export const TypeServiceDiv = styled.div`
-  text-align: center;
-  margin: 0 0 20px;
-
-  span {
-    display: block;
-    line-height: 50px;
-    font-size: 1.5em;
-    font-style: italic;
-    font-weight: bold;
-  }
-
-  @media (min-width:750px) {
-    display: inline-block;
-    margin: 3%;
-  }
-`;
 
 /*
   CAROUSEL
@@ -389,4 +404,13 @@ export const FScreenImgDiv = styled.div`
 // FOR MAIN DIV ON SINGLE IMG COMPONENT
 export const OutterSingleImageDiv = styled.div`
   padding: 0;
+`;
+
+// SERVICEjs H1 EL, THIS IS ALSO USED IN BLOGjs
+export const ServiceHeader = styled.h1`
+  margin: 8% 0;
+  text-align: center;
+  font-size: 4em;
+  font-weight: bold;
+  font-style: italic;
 `;
