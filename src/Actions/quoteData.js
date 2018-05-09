@@ -1,4 +1,4 @@
-import firebase from '.././firebase';
+import firebase from '../firebase';
 
 export function quoteFormDataSuccess(quoteName, quoteInfo) {
   return {
