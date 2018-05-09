@@ -1,6 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Header, Nav, UL, Item, StyledRoute, ImageDivAroundLogo, Label, Input } from '../Styled/index';
 
+=======
+import { Link } from 'react-router-dom';
+import { Header, OutterUL, InnerUL, Item, StyledRoute, ImageDivAroundLogo, Label, Input } from '../Styled/index';
+import SingleImage from './SingleImg';
+  
+>>>>>>> aac5343174404823bb978a4edca1f83b3a6e4d68
 
 const NavBar = (props) => {
   return (
