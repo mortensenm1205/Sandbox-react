@@ -1,6 +1,6 @@
 import React from 'react';
 import PostCard from './PostCard';
-import { ServiceHeader, MainBlogDiv } from '../Styled/index';
+import { ServiceHeader, MainBlogDiv, BlogOnlyDiv } from '../Styled/index';
 
 const Blog = () => {
   return (

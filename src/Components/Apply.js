@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { applicationDataSuccess, applicationFormDataUpload } from '../Actions/applicationData';
-import { Button } from '../Styled/index';
+import { Button, Labels } from '../Styled/index';
 
 class Apply extends Component {
 
@@ -18,38 +18,35 @@ class Apply extends Component {
       <div>
         <h1>{this.props.type}</h1>
         <form>
-          <label>
+          <Labels>
             Name:
             <input name="Name" type="text" onChange={this.handleChange}/>
-          </label>
-          <br />
-          <label>
+          </Labels>
+          <Labels>
             Email:
             <input name="Email" type="text" onChange={this.handleChange}/>
-          </label>
-          <br />
-          <label>
+          </Labels>
+          <Labels>
             Phone:
             <input name="Phone" type="text" onChange={this.handleChange}/>
-          </label>
-          <br />
-          <label>
+          </Labels>
+          <Labels>
             Street:
             <input name="Street" type="text" onChange={this.handleChange}/>
-          </label>
-          <label>
+          </Labels>
+          <Labels>
             ZIP:
             <input name="ZIP" type="text" onChange={this.handleChange}/>
-          </label>
-          <label>
+          </Labels>
+          <Labels>
             City:
             <input name="City" type="text" onChange={this.handleChange}/>
-          </label>
-          <label>
+          </Labels>
+          <Labels>
             State:
             <input name="State" type="text" onChange={this.handleChange}/>
-          </label>
-          <label>
+          </Labels>
+          <Labels>
             Country:
             <select name="Country" onChange={this.handleChange}>
               <option>Select a Country...</option>
@@ -57,7 +54,7 @@ class Apply extends Component {
               <option value="ger">Germany</option>
               <option value="mex">Mexico</option>
             </select>
-          </label>
+          </Labels>
           <Button onClick={this.handleClick}>Submit</Button>
         </form>
       </div>

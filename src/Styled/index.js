@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
-import { Card } from 'material-ui/Card';
+import { Card, CardMedia } from 'material-ui/Card';
 
 /*
   BASE / ROOT STYLING
@@ -212,6 +212,11 @@ export const SeperatedDiv = styled.div`
   padding: 0 0 55px;
 `;
 
+export const HomePostOnlyDiv = styled.div`
+  text-align: center;
+`;
+
+
 /*
   SERVICE
 */
@@ -251,7 +256,9 @@ export const TypeServiceDiv = styled.div`
 
 export const MainBlogDiv = styled.div`
   padding: 0 0 10% 0;
+
 `;
+
 
 /*
   FOOTER
@@ -309,6 +316,21 @@ export const ModalTypeDiv = styled.div`
   }
 `;
 
+// LABEL MODAL STYLING FOR APPLY AND QUOTE
+export const Labels = styled.label`
+  display: block;
+  margin: 0 0 2% 0;
+
+  & input {
+    margin: 0 0 0 2%;
+    width: 70%;
+  }
+
+  & ${Button} {
+    display: block;
+  }
+
+`;
 
 
 /*
@@ -329,7 +351,6 @@ export const CarouselDiv = styled(Slider)`
 export const MainCardDiv = styled.div`
   width: 95%;
   margin: 0 auto;
-  text-align: center;
 `;
 // DIFFERENCE HERE IS THE MAIN CARD IS PART
 // OF THE CARD COMPONENT AND MAINCARDDIV IS JUST
@@ -348,6 +369,11 @@ export const MainCard = styled(Card)`
     width: 25%;
     margin: 0 4% 0 0;
   }
+`;
+
+export const CardImgMedia = styled(CardMedia)`
+  height: 165px;
+  overflow: hidden;
 `;
 
 /*

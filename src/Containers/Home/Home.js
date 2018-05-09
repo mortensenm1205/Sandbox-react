@@ -4,7 +4,7 @@ import CarouselComponent from "../../Components/Carousel";
 import SingleImage from '../../Components/SingleImg';
 import Modal from "../../Components/Modal";
 import PostCard from "../../Components/PostCard";
-import { ModalTypeDiv, FScreenImgDiv, BlackFade, OutterHomeDiv, OurClientsImageDiv, ContextHeading, CustomContextHeading, SeperatedDiv, DivAroundClientsImages } from '../../Styled/index';
+import { ModalTypeDiv, FScreenImgDiv, BlackFade, OutterHomeDiv, OurClientsImageDiv, ContextHeading, CustomContextHeading, SeperatedDiv, HomePostOnlyDiv, DivAroundClientsImages } from '../../Styled/index';
 import { imagesRetrival } from "../../Actions/imgSelection";
 import { connect } from 'react-redux';
 
@@ -56,7 +56,9 @@ class Home extends Component {
         </div>
         <SeperatedDiv>
           <CustomContextHeading> Recent Blog Posts: </CustomContextHeading>
-          <PostCard recent/>
+          <HomePostOnlyDiv>
+            <PostCard recent/>
+          </HomePostOnlyDiv>
         </SeperatedDiv>
       </OutterHomeDiv>
     );

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import renderHTML from 'react-render-html'
-import { MainCardDiv, MainCard } from '../Styled/index';
-import { CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import { MainCardDiv, MainCard, CardImgMedia } from '../Styled/index';
+import { CardTitle, CardText } from 'material-ui/Card';
 import { connect } from 'react-redux';
 import { postsFetchData } from '../Actions/posts';
 
@@ -24,14 +24,20 @@ class PostCard extends Component {
         return (
           <MainCard key={post.id}>
             <CardTitle title={post.title.rendered} />
-            <CardMedia>
+            <CardImgMedia>
             {post.better_featured_image ?
               <img src={post.better_featured_image.source_url} alt={post.better_featured_image.alt_text} />
               :
               <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} alt='placeholder'/>
             }
-            </CardMedia>
-            <CardText>{renderHTML(post.content.rendered)}</CardText>
+            </CardImgMedia>
+            <CardText>
+              {post.content.rendered.length > 50 ?
+                renderHTML(post.content.rendered.slice(0, 49) + "...")
+                :
+                <a>See More</a>}
+                <a>See More</a>
+            </CardText>
           </MainCard>
         )
       }))
@@ -40,13 +46,13 @@ class PostCard extends Component {
         return (
           <MainCard key={post.id}>
             <CardTitle title={post.title.rendered} />
-            <CardMedia>
+            <CardImgMedia>
             {post.better_featured_image ?
               <img src={post.better_featured_image.source_url} alt={post.better_featured_image.alt_text} />
               :
               <img src={process.env.PUBLIC_URL + '/images/placeholder_blue.png'} alt='placeholder'/>
             }
-            </CardMedia>
+            </CardImgMedia>
             <CardText>{renderHTML(post.content.rendered)}</CardText>
           </MainCard>
         )

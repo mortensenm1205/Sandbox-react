@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { quoteFormDataSuccess, quoteFormUploader } from '../Actions/quoteData';
-import { Button } from '../Styled/index';
+import { Button, Labels } from '../Styled/index';
 
 
 class Quote extends Component {
@@ -19,17 +19,15 @@ class Quote extends Component {
       <div>
         <h1>{this.props.type}</h1>
         <form>
-          <label>
+          <Labels>
             Name:
             <input type="text" name="Name" onChange={this.handleChange} />
-          </label>
-          <br />
-          <label>
+          </Labels>
+          <Labels>
             Email:
             <input type="text" name="Email" onChange={this.handleChange} />
-          </label>
-          <br />
-          <label>
+          </Labels>
+          <Labels>
             # of Source Languages:
             <select name="Source_Lang" onChange={this.handleChange}>
               <option value='0'>0</option>
@@ -37,9 +35,8 @@ class Quote extends Component {
               <option value='2'>2</option>
               <option value='3'>3</option>
             </select>
-          </label>
-          <br />
-          <label>
+          </Labels>
+          <Labels>
             # of Target Languages:
             <select name="Target_Lang" onChange={this.handleChange}>
               <option value='0'>0</option>
@@ -47,11 +44,11 @@ class Quote extends Component {
               <option value='2'>2</option>
               <option value='3'>3</option>
             </select>
-          </label>
-          <label>
+          </Labels>
+          <Labels>
             Upload your Source Document:
             <input type="file" name="Source_doc" onChange={this.handleChange}/>
-          </label>
+          </Labels>
           <Button onClick={this.handleSubmit}>Submit</Button>
         </form>
       </div>
