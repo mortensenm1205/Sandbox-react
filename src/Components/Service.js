@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "./Modal";
 import Media from 'react-media';
 import CarouselComponent from "./Carousel";
-import { ModalTypeDiv, FScreenImgDiv, BlackFade, OutterServiceTypeDiv, ServiceHeader, ContextHeading, TypeServiceDiv } from "../Styled/index";
+import { ModalTypeDiv, FScreenImgDiv, BlackFade, OutterServiceDiv, OutterServiceTypeDiv, ServiceHeader, ContextHeading, TypeServiceDiv } from "../Styled/index";
 import SingleImage from "./SingleImg";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
 import faBook from "@fortawesome/fontawesome-free-solid/faBook";
@@ -11,13 +11,13 @@ import faCertificate from "@fortawesome/fontawesome-free-solid/faCertificate";
 
 const Service = (props) => {
   return (
-    <OutterServiceTypeDiv>
+    <OutterServiceDiv>
       <ServiceHeader>{props.typeServ}</ServiceHeader>
       <ModalTypeDiv>
         <Modal type="Quote"/>
         <Modal type="Apply"/>
       </ModalTypeDiv>
-      <Media query="(min-width: 800px)">
+      <Media query="(min-width: 750px)">
         {matches =>
           matches ? (
             <FScreenImgDiv>
@@ -31,7 +31,7 @@ const Service = (props) => {
             </FScreenImgDiv>
           )}
       </Media>
-      <div>
+      <OutterServiceTypeDiv>
         <ContextHeading> Type of Translation we do: </ContextHeading>
         <TypeServiceDiv>
           <FontAwesomeIcon icon={faBook} size="4x" />
@@ -45,8 +45,8 @@ const Service = (props) => {
           <FontAwesomeIcon icon={faCertificate} size="4x" />
           <span>Birth Certificates</span>
         </TypeServiceDiv>
-      </div>
-    </OutterServiceTypeDiv>
+      </OutterServiceTypeDiv>
+    </OutterServiceDiv>
   )
 };
 

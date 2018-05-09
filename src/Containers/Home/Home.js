@@ -23,7 +23,7 @@ class Home extends Component {
         <ModalTypeDiv>
           <Modal type="Quote"/>
         </ModalTypeDiv>
-        <Media query="(min-width: 800px)">
+        <Media query="(min-width: 750px)">
           {matches =>
             matches ? (
               <FScreenImgDiv>

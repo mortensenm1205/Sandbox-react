@@ -7,7 +7,7 @@ import { Card } from 'material-ui/Card';
   BASE / ROOT STYLING
 */
 export const Root = styled.div`
-  max-width: 1100px;
+  max-width: 1250px;
   margin: 0 auto;
 `;
 
@@ -20,9 +20,14 @@ export const OutterUL = styled.ul`
   padding: 0;
   text-align: center;
 
-  @media (min-width: 800px) {
+  @media (min-width:750px) {
     display: inline-block;
     width: 50%;
+  }
+
+  @media (min-width:1100px) {
+    width: 65%;
+    text-align: right;
   }
 `;
 
@@ -39,15 +44,22 @@ export const ImageDivAroundLogo = styled.div`
     height: 100%;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width:750px) {
     text-align: left;
     display: inline-block;
     width: 35%;
+    padding: 2% 0 0;
 
     img {
       width: 65%;
     }
 
+  }
+
+  @media (min-width:1100px) {
+    img {
+      width: 50%;
+    }
   }
 
 `;
@@ -75,7 +87,7 @@ export const Item = styled.li`
     line-height: 50px;
   }
 
-  @media ( min-width:800px ) {
+  @media (min-width:750px) {
     span {
       display: block;
     }
@@ -90,7 +102,7 @@ export const Label = styled.label`
   font-size: 1.8em;
   cursor: pointer;
 
-  @media (min-width: 800px) {
+  @media (min-width:750px) {
     display: none;
   }
 `;
@@ -107,10 +119,16 @@ export const Input = styled.input.attrs({
   & ~ ${Item} {
     display: none;
 
-    @media (min-width: 800px) {
+    @media (min-width:750px) {
       display: inline-block;
       margin: 3% 5% 0;
       border-bottom: none;
+    }
+
+
+    @media (min-width:1100px) {
+      font-size: 1.6em;
+      margin: 3% 2.5% 0;
     }
   }
 
@@ -161,10 +179,19 @@ export const OurClientsImageDiv = styled.div`
     margin: 20px 0;
   }
 
-  @media (min-width: 800px) {
+  @media (min-width:750px) {
     width: 30%;
     display: inline-block;
   }
+
+  @media (min-width:1100px) {
+    width: 20%;
+
+    img {
+      width: 60%;
+    }
+  }
+
 `;
 // HANDLING THE CONTEXT HEADINGS IN HOMEjs
 export const ContextHeading = styled.h3`
@@ -213,8 +240,19 @@ export const ModalDiv = styled.div`
 export const ModalTypeDiv = styled.div`
   z-index: 1;
   position: absolute;
-  top: 245px;
-  left: 85px;
+  top: 10%;
+  left: 17%;
+
+  @media (min-width:750px) {
+    top: 18%;
+    left 33%;
+  }
+
+  @media (min-width:1100px) {
+    top: 22%
+    left: 33%;
+    width: 35%;
+  }
 `;
 
 /*
@@ -222,7 +260,7 @@ export const ModalTypeDiv = styled.div`
 */
 
 // SERVICEjs OUTTER DIV
-export const OutterServiceTypeDiv = styled.div`
+export const OutterServiceDiv = styled.div`
   position: relative;
 `;
 
@@ -233,6 +271,10 @@ export const ServiceHeader = styled.h1`
   font-size: 4em;
   font-weight: bold;
   font-style: italic;
+`;
+
+export const OutterServiceTypeDiv = styled.div`
+  text-align: center;
 `;
 
 //SERVICEjs div's around the icons and description.
@@ -246,6 +288,11 @@ export const TypeServiceDiv = styled.div`
     font-size: 1.5em;
     font-style: italic;
     font-weight: bold;
+  }
+
+  @media (min-width:750px) {
+    display: inline-block;
+    margin: 3%;
   }
 `;
 
@@ -275,11 +322,16 @@ export const MainCardDiv = styled.div`
 export const MainCard = styled(Card)`
   margin: 0 0 20px;
 
-  @media (min-width: 800px) {
+  @media (min-width:750px) {
     display: inline-block;
     width: 45%;
     vertical-align: text-top
     margin: 0 2% 0 0;
+  }
+
+  @media (min-width:1100px) {
+    width: 25%;
+    margin: 0 4% 0 0;
   }
 `;
 
@@ -296,6 +348,12 @@ export const Button = styled.button`
   border-radius: 6px;
   background-color: #006dcc;
   color: white;
+
+
+  @media (min-width:1100px) {
+    padding: ${props => props.full ? "3% 0" : "0"}
+  }
+
 `;
 
 export const BlackFade =styled.div`
@@ -307,7 +365,7 @@ export const BlackFade =styled.div`
   opacity: .4;
   z-index-1;
 
-  @media (min-width:800px) {
+  @media (min-width:750px) {
     top: 3px;
   }
 `;
@@ -321,7 +379,7 @@ export const FScreenImgDiv = styled.div`
       display: block;
       overflow: hidden;
 
-      @media (min-width: 800px) {
+      @media (min-width:750px) {
         width: 100%;
       }
     }
