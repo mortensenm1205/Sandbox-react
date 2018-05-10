@@ -430,7 +430,6 @@ export const FScreenImgDiv = styled.div`
 // FOR MAIN DIV ON SINGLE IMG COMPONENT
 export const OutterSingleImageDiv = styled.div`
   padding: 0;
-  border: 2px solid red;
 `;
 
 // SERVICEjs H1 EL, THIS IS ALSO USED IN BLOGjs
