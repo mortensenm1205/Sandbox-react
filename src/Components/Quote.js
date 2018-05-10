@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import { quoteFormDataSuccess, quoteFormUploader } from '../Actions/quoteData';
 import { Button, Labels } from '../Styled/index';
 
-
 class Quote extends Component {
 
   handleChange = event => {
     this.props.quoteData(event.target.name, event.target.value);
   }
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault();
     this.props.quoteUploader(this.props.quotedData);
   }
 

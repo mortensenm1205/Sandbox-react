@@ -9,7 +9,8 @@ class Apply extends Component {
       this.props.appInfo(event.target.name, event.target.value)
   }
 
-  handleClick = () => {
+  handleSubmit = (e) => {
+    e.preventDefault();
     this.props.appUpload(this.props.appliedData);
   }
 
@@ -55,7 +56,7 @@ class Apply extends Component {
               <option value="mex">Mexico</option>
             </select>
           </Labels>
-          <Button onClick={this.handleClick}>Submit</Button>
+          <Button onClick={this.handleSubmit}>Submit</Button>
         </form>
       </div>
     )

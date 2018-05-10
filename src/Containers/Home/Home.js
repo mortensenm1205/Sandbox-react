@@ -12,7 +12,7 @@ class Home extends Component {
 
   componentDidMount() {
     // this.props.images("http://reacttranslationwork.local/wp-json/wp/v2/media")
-    this.props.images("http://reacttranslation.local/wp-json/wp/v2/media")
+    this.props.images("https://reacttranslation.local/wp-json/wp/v2/media")
 
   }
 
@@ -20,6 +20,7 @@ class Home extends Component {
     var { imgType } = this.props
     return (
       <OutterHomeDiv>
+        {console.log("some data")}
         <ModalTypeDiv>
           <Modal type="Quote"/>
         </ModalTypeDiv>

@@ -12,7 +12,7 @@ class PostCard extends Component {
   //reacttranslation is for the Macbook
   //reacttranslationwork is for the work computer
   componentDidMount() {
-    this.props.fetchData('http://reacttranslation.local/wp-json/wp/v2/posts');
+    this.props.fetchData('https://reacttranslation.local/wp-json/wp/v2/posts');
     // this.props.fetchData('http://reacttranslationwork.local/wp-json/wp/v2/posts');
   }
 
